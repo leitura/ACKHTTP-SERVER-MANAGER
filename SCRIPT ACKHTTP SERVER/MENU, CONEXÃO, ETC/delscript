@@ -1,0 +1,43 @@
+#!/bin/bash
+clear
+echo -e "\033[1;36mDESEJA DESISTALAR O ACKHTTP SERVER  MANAGER ?\033[1;33m"
+echo ""
+echo -e "\033[1;36mSERA REMOVIDO TODOS OS RECURSOS INSTALADOS! \033[1;33m"
+echo ""
+echo -e "\033[1;32m DIGITE \033[1;37m[ sim ] PARA CONTINUAR ."
+echo ""
+echo -e "\033[1;31m DIGITE \033[1;37m[ nao ] PARA RETORNAR AO MENU ."
+echo ""
+read -p "DIGITE >>> " resp
+if [[ "$resp" = sim || "$resp" = SIM ]];then
+echo ""
+    echo -e "\033[1;33mREMOVENDO RECURSOS DO SCRIPT... \033[1;33m"
+    apt-get purge screen -y > /dev/null 2>&1
+    apt-get purge nmap -y > /dev/null 2>&1
+    apt-get purge figlet -y > /dev/null 2>&1
+    apt-get purge squid -y > /dev/null 2>&1
+    apt-get purge squid3 -y > /dev/null 2>&1
+    apt-get purge dropbear -y > /dev/null 2>&1
+    apt-get purge apache2 -y > /dev/null 2>&1
+    apt-get purge htop -y > /dev/null 2>&1
+    apt-get purge iptables -y > /dev/null 2>&1
+    apt-get purge net-tools -y > /dev/null 2>&1
+    apt-get purge sysstat -y > /dev/null 2>&1
+    apt-get purge slurm -y > /dev/null 2>&1
+    apt-get purge intel-microcode -y > /dev/null 2>&1
+    apt-get purge haveged -y > /dev/null 2>&1
+    apt-get purge ethtool -y > /dev/null 2>&1
+    apt-get purge gcc -y > /dev/null 2>&1
+    apt-get purge build-essential -y > /dev/null 2>&1
+    apt-get autoremove -y > /dev/null 2>&1
+    rm -f /bin/criarusuario /bin/expcleaner /bin/sshlimiter /bin/addhost /bin/listar /bin/sshmonitor /bin/ajuda /bin/menu /bin/OpenVPN /bin/userbackup /bin/tcpspeed /bin/badvpn /bin/otimizar /bin/speedtest /bin/trafego /bin/banner /bin/limit /bin/limite /bin/senharoot /bin/reiniciarservicos /bin/reiniciarsistema /bin/attscript /bin/criarteste /bin/socks  /bin/DropBear /bin/alterarlimite /bin/alterarsenha /bin/remover /bin/detalhes /bin/mudardata /bin/botssh /bin/infousers /bin/droplimiter /bin/conexao /bin/onlineapp /bin/botteste /bin/trojan-go /bin/v2raymanager /bin/versao/ /bin/ackclear /bin/acksyshttpack /bin/prissh /bin/blocksite /bin/tweaker  > /dev/null 2>&1
+    rm -rf /etc/SSHPlus > /dev/null 2>&1
+    crontab -r
+    clear
+echo ""
+    echo -e "\033[1;36mSCRIPT REMOVIDO COM SUCESSO! \033[1;33m"
+    sleep 4s
+else
+cd
+exit
+fi
